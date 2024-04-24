@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head lang="pt-BR">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width", initial-scale="1.0">
+        <title>Calculadora de preços</title>
+
+        <style>
+
+            div {
+                font-family: Arial, sans-serif;
+                background-image: linear-gradient(to right, silver, rgb(211, 198, 198));
+                padding: 20px;
+            }
+
+        </style>
+
+    </head>
+        <div>
+        <h1>Calculadora de preços </h1>
+        <input type="number" id="codigo">
+        <button onclick="calcular()">Calcular</button>
+        <p id="preco_sugerido">Preço Sugerido:</p>
+        <p id="preco_revendedor">Preço de revendedor: </p>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h5>Obrigada por utilizar os serviços da OPS developer</h5>
+        </div>
+        
+        <script>
+            function calcular() {
+                let codigo = document.getElementById("codigo").value;
+                console.log(codigo);
+                let preco_sugerido = codigo * 0.2;
+                preco_sugerido = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(preco_sugerido);
+                let preco_revendedor = codigo * 0.085;
+                preco_revendedor = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(preco_revendedor);
+                let span_preco_sugerido = document.getElementById("preco_sugerido");
+                let span_preco_revendedor = document.getElementById("preco_revendedor");
+                span_preco_sugerido.innerHTML = "Preço Sugerido: " + preco_sugerido;
+                span_preco_revendedor.innerHTML = "Preço de revendedor: " + preco_revendedor;
+            }
+        </script>
+
+    </body>
+</html>

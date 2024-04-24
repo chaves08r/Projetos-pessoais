@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head lang="pt-BR">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width", initial-scale="1.0">
+        <title>Calculadora de preços</title>
+
+        <style>
+
+            div {
+                font-family: Arial, sans-serif;
+                background-image: linear-gradient(to right, rgba(218, 212, 212, 0.849), rgb(37, 91, 153));
+                padding: 20px;
+            }
+
+        </style>
+
+    </head>
+        <div>
+        <h1>Calculadora de preços </h1>
+        <input placeholder="Código do Produto" type="number" id="codigo">
+        <button onclick="calcular()">Calcular</button>
+        <p id="preco_sugerido">Valor a ser pago:</p>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h5>Obrigada por utilizar os serviços da OPS developer</h5>
+        </div>
+        
+        <script>
+            function calcular() {
+                let codigo = document.getElementById("codigo").value;
+                console.log(codigo);
+                let preco_sugerido = codigo * 0.2;
+                preco_sugerido = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(preco_sugerido);
+                let span_preco_sugerido = document.getElementById("preco_sugerido");
+                span_preco_sugerido.innerHTML = "Valor a ser pago: " + preco_sugerido;
+            }
+        </script>
+
+    </body>
+</html>
