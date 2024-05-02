@@ -1,0 +1,18 @@
+´´´
+Aqui vão as instruções do que fazer para arrasar no seu desafio:
+
+    Use o dataset dataset_casa que se encontra no material adicional no classroom ou
+    no arquivo da pasta material e cole para o seu arquivo python
+    - assim como fizemos em aula, se lembra?
+    Crie um menu que onde seja possível fazer as seguintes opções:
+        Adicionar um novo registro , contendo todos os dados necessários,
+        seguindo o modelo dos registros do dataset
+        Calcular a receita do ano escolhido pelo usuário
+            Exibir também qual foi o mês que teve mais lucro e o que teve mais despesa
+        Mostrar qual ano teve a melhor receita e qual teve a pior
+        Uma opção de saída
+    Adicione uma condição para caso o usuário não digite uma opção válida no menu.
+
+Boa sorte!
+
+´´´
